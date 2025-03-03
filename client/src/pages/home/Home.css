@@ -1,0 +1,354 @@
+/* ============================================
+   Global Font Settings
+============================================ */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ============================================
+   Home Section Container
+   - Handles main layout and background
+============================================ */
+.home {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 120px 100px 50px 100px;
+    position: relative;
+    color: white;
+    justify-content: center;
+    
+}
+
+/* ============================================
+   Background Overlay
+   - Creates gradient overlay on background image
+============================================ */
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(10, 25, 47, 0.9),
+            rgba(17, 34, 64, 0.95)),
+        url('../../assets/bg-pattern.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* ============================================
+   Content Container
+   - Ensures content appears above background
+============================================ */
+.home-content {
+    flex: 1;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+
+}
+
+.home-image {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.home-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+
+}
+
+/* ============================================
+   Typography Styles
+   - Handles all text styling
+============================================ */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #64ffda;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Typing Animation Text */
+.typing-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #64ffda;
+    margin-top: 5px;
+}
+
+/* Main Description Text */
+.home-content p {
+    font-size: 1.2rem;
+    color: #a8b2d1;
+    margin-top: 10px;
+    line-height: 1.6;
+    text-align: left;
+    width: 90%;
+}
+
+/* Highlighted Text in Description */
+.home-content p strong {
+    color: #00A3FF;
+    font-weight: 600;
+
+}
+
+/* ============================================
+   Social Media Section
+   - Handles social icons and hover effects
+============================================ */
+.social-links {
+    width: 250px;
+    justify-content: space-around;
+    align-self: flex-start;
+}
+
+.social-links a {
+    margin-right: 15px;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.social-icon {
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.2);
+    color: #64ffda;
+}
+
+/* ============================================
+   CV Download Button
+   - Styles for the call-to-action button
+============================================ */
+.cv-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0a192f;
+    background: #64ffda;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    background: #52e0c8;
+}
+
+/* ============================================
+   Profile Image Styles
+============================================ */
+.home-social-download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+/* ============================================
+   Responsive Design
+   - Breakpoints for different screen sizes
+============================================ */
+/* Large Screens (up to 1200px) */
+@media screen and (max-width: 1200px) {
+    .home {
+        padding: 30px;
+    }
+
+    .home-content p {
+        max-width: 95%;
+        font-size: 1.1rem;
+    }
+
+    .home-image img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Medium Screens (up to 968px) */
+@media screen and (max-width: 968px) {
+    .home {
+        padding: 120px 20px 50px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-content,
+    .home-image {
+        width: 100%; /* Full width on mobile */
+        align-self: center;
+        justify-content: center;
+    }
+
+    .home-content {
+        order: 2;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .home-image {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .home-image img {
+        width: 250px;
+    }
+
+    .home-content p {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .typing-text {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .download-btn {
+        align-self: center;
+    }
+
+    .social-links {
+        align-self: center;
+    }
+}
+
+/* Small Screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .home-image img {
+        width: 250px;
+        height: 250px;
+        background: #000;
+        
+    }
+
+    .home-content p {
+        text-align: justify;
+        padding: 0 15px;
+        justify-content: center;
+    }
+}
+
+/* Extra Small Screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .home {
+        padding: 100px 0px 30px 0px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-image img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .home-content {
+        width: 100%;
+        padding: 0 10px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-content p {
+        width: 90%;
+        margin: 10px auto;
+        text-align: left;
+    }
+
+    .typing-text {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .home-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .home-image img {
+        max-width: 80%;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        font-size: 25px;
+    }
+
+    .cv-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        width: 80%;
+        max-width: 250px;
+    }
+    .download-btn {
+        align-self: center;
+    }
+
+    .social-links {
+        align-self: center;
+    }
+}
+
+/* Very Small Screens (up to 360px) */
+@media screen and (max-width: 360px) {
+    .home-image img {
+        width: 180px;
+        height: 180px;
+    }
+}

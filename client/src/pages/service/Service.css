@@ -1,0 +1,119 @@
+.services {
+  min-height: 100vh;
+  padding: 100px;
+  background: linear-gradient(
+    rgba(10, 25, 47, 0.9),
+    rgba(17, 34, 64, 0.95)
+  );
+  color: white;
+  position: relative;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.service-card {
+  background: rgba(100, 255, 218, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+  border-color: #64ffda;
+}
+
+.service-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(100, 255, 218, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  font-size: 35px;
+  color: #64ffda;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #64ffda;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #8892b0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.service-features li {
+  color: #a8b2d1;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.service-features li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+
+@media screen and (max-width: 1200px) {
+  .services {
+    padding: 80px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 60px 30px;
+  }
+
+  .services-container {
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services {
+    padding: 40px 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-features li {
+    font-size: 0.9rem;
+  }
+}
+
