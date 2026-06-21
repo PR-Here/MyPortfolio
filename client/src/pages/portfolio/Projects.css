@@ -1,0 +1,445 @@
+.projects {
+  min-height: 100vh;
+  padding: 100px;
+  background: linear-gradient(
+    rgba(10, 25, 47, 0.9),
+    rgba(17, 34, 64, 0.95)
+  );
+  color: white;
+  position: relative;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.project-card {
+  background: rgba(100, 255, 218, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  will-change: transform;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+  border-color: #64ffda;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(10, 25, 47, 0.8);
+  padding: 0;
+}
+
+/* Common styles for all project images */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+  will-change: transform;
+}
+
+/* Update hover effect */
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+}
+
+.project-icon {
+  font-size: 25px;
+  color: #64ffda;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.project-icon:hover {
+  transform: scale(1.2);
+}
+
+.project-content {
+  padding: 25px;
+  background: rgba(10, 25, 47, 0.5);
+}
+
+.project-content h3 {
+  font-size: 1.8rem;
+  color: #64ffda;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #8892b0;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  max-height: 100px;
+  overflow: auto;
+  padding-right: 10px;
+}
+
+.project-content p::-webkit-scrollbar {
+  width: 4px;
+}
+
+.project-content p::-webkit-scrollbar-track {
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: 2px;
+}
+
+.project-content p::-webkit-scrollbar-thumb {
+  background: #64ffda;
+  border-radius: 2px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.tech-tag {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  transition: background-color 0.25s ease;
+  white-space: nowrap;
+}
+
+.section-description {
+  margin-top: 10px;
+  color: #a8b2d1;
+  max-width: 700px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.app-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.app-links a,
+.app-not-live {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.08);
+  text-decoration: none;
+}
+
+.app-links a:hover {
+  background: rgba(100, 255, 218, 0.15);
+  border-color: #64ffda;
+}
+
+.certificate-section {
+  margin-top: 60px;
+  scroll-margin-top: 110px;
+}
+
+.certificate-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.certificate-heading h2 {
+  color: #64ffda;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.certificate-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.app-card,
+.certificate-item {
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+}
+
+.certificate-item,
+.certificate-item h3,
+.certificate-item span {
+  text-decoration: none;
+}
+
+.app-card:hover,
+.certificate-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+  border-color: #64ffda;
+}
+
+.app-card,
+.certificate-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app-card-content,
+.certificate-content {
+  padding: 25px;
+  background: rgba(10, 25, 47, 0.5);
+}
+
+.app-card-header,
+.certificate-header,
+.certificate-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.app-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(100, 255, 218, 0.12);
+  border-radius: 12px;
+  color: #64ffda;
+  font-size: 1.2rem;
+}
+
+.app-card-header h3,
+.certificate-header span,
+.certificate-card-header h3 {
+  color: #64ffda;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.app-card-header h3,
+.certificate-card-header h3 {
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(100, 255, 218, 0.35);
+}
+
+.app-status {
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0f7f1;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.app-card p,
+.certificate-description {
+  color: #8892b0;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.app-links a,
+.app-not-live {
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.08);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.app-links a:hover {
+  background: rgba(100, 255, 218, 0.18);
+}
+
+.app-not-live {
+  display: inline-flex;
+  align-items: center;
+}
+
+.certificate-header svg {
+  color: #64ffda;
+  font-size: 1.2rem;
+}
+
+.certificate-header span {
+  color: #64ffda;
+  line-height: 1.6;
+}
+
+.tech-tag:hover {
+  background: rgba(100, 255, 218, 0.2);
+}
+
+.image-fallback {
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 255, 218, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #64ffda;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects {
+    padding: 80px 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .projects {
+    padding: 80px 50px;
+  }
+
+  .app-cards,
+  .certificate-list {
+    gap: 30px;
+  }
+}
+
+.certificate-list {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    padding: 60px 30px;
+  }
+
+  .projects-container,
+  .app-cards,
+  .certificate-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .project-image {
+    height: 250px;
+  }
+
+  .project-content,
+  .app-card-content {
+    padding: 20px;
+  }
+
+  .project-content h3,
+  .app-card-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-content p {
+    max-height: 120px;
+  }
+
+  .certificate-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects {
+    padding: 40px 20px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-content h3,
+  .app-card-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-content p,
+  .app-card p {
+    font-size: 0.95rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .app-card-content {
+    padding: 18px;
+  }
+
+  .certificate-item {
+    padding: 18px;
+    gap: 10px;
+  }
+}
+
